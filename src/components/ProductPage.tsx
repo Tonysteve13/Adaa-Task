@@ -32,7 +32,7 @@ const ProductPage: React.FC = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
+      const response = await fetch(`https://dummyjson.com/products?limit=10&skip=5`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -107,7 +107,7 @@ const ProductPage: React.FC = () => {
         <button onClick={handleNextPage} disabled={skip + limit >= totalProducts}>
           Next
         </button>
-      </div>
+      </div> <br />
       <table>
         <thead>
           <tr>
